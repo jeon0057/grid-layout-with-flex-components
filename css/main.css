@@ -13,7 +13,7 @@ body {
     display: grid;
     /* creates one explicit row with 2 equal columns */
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
+    grid-gap: 15px;
 }
   
 .emoji {
@@ -30,20 +30,23 @@ body {
     border-bottom: 2px solid #ccc;
 }
 
+.emoji p {
+    /* pushes button to bottom by taking up available space */
+    flex-grow: 1;
+}
+
 .emoji a {
     text-decoration: none;
     background-color: #781BAA;
     color: white;
     padding: 1rem;
     border-radius: 8px;
-    /* top margin takes up as much space as possible */
-    margin-top: auto;
 }
 
 .icon {
     font-size: 4rem;
     /* brings emojis to the top */
     order: -1;
-    /* centers onlt the emojis */
+    /* centers only the emojis */
     align-self: center;
 }
